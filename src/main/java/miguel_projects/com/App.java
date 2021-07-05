@@ -4,7 +4,7 @@ package miguel_projects.com;
 import java.util.Scanner;
 
 import java.math.*;
-
+import java.awt.*;
 
 
 /**
@@ -93,7 +93,18 @@ public class App
 
     }
 
+    public static String multiplo10(int numero){
+        var message = "";
+        if (numero % 10 != 0){
+            message =  "el numero" + numero + "no es un multiplo de 10" ;
 
+        }else{
+            message =  "el numero " + numero + " es un multiplo de 10" ; 
+        }
+
+        return message;
+
+    }    
 
 
     public static void main( String[] args )
@@ -151,6 +162,32 @@ public class App
 
        }
        System.out.println(hipotenusa(cateto_1, cateto_2));
+       
+
+    /*******************************************************Ejercicio 6***********************************************************/
+       var validacion_multiplo_10 =  "false";
+       var numeromultiplo  = 0; 
+        while (validacion_multiplo_10 == "false"){
+        System.out.println("write a num and tell you is multiple of 10");
+        numeromultiplo  = valores.nextInt();
+       
+        validacion_multiplo_10 = multiplo10(numeromultiplo);
+
+        
+
+        }
+
+        System.out.println(multiplo10(numeromultiplo));
+
+
+
+
+
+
         valores.close();
     }
+
+    
+
+
 }
